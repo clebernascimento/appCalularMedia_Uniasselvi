@@ -2,6 +2,7 @@ package com.example.appmediauniasselvi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 if (media <= 6.50)
                 {
                     textMedia.setText("Média: " + media);
+                    textmediaFinal.setText("Média Final: "+ media);
+                    textresulatado.setText("Reprovado");
+                    textresulatado.setTextColor(Color.RED);
                 }
             }
         });
