@@ -32,6 +32,8 @@
         android:layout_marginTop="16dp"
         android:background="#ffffff"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -46,6 +48,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/avaliacao1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Digite sua nota"
@@ -59,6 +62,8 @@
         android:layout_marginTop="8dp"
         android:background="#ffffff"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearAvaliação1">
@@ -73,6 +78,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/avaliacao2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Digite sua nota"
@@ -86,6 +92,8 @@
         android:layout_marginTop="8dp"
         android:background="#ffffff"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearAvaliação2">
@@ -100,6 +108,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/discussiva"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Digite sua nota"
@@ -113,6 +122,8 @@
         android:layout_marginTop="8dp"
         android:background="#ffffff"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearDiscussiva">
@@ -127,6 +138,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/avaliacaoFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Digite sua nota"
@@ -138,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
         android:text="Simular Média"
         android:textAlignment="textStart"
         android:textAllCaps="true"
@@ -160,6 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearAvaliaçãoFinal">
 
         <Button
+            android:id="@+id/buttonLimpar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
@@ -170,6 +183,7 @@
             android:layout_marginRight="25dp"/>
 
         <Button
+            android:id="@+id/buttonCalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calcular Media"
@@ -184,6 +198,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Media"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearButton" />
@@ -194,6 +212,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Media Final"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMedia" />
@@ -204,6 +226,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Resultaddo"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMedia_Final" />
