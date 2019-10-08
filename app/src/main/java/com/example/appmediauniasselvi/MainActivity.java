@@ -65,22 +65,21 @@ public class MainActivity extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double nota1 = 0;
-                double nota2 = 0;
-                double nota3 = 0;
-                double nota4 = 0;
-
-                nota1 = Double.parseDouble(avaliacao1.getText().toString());
-                nota2 = Double.parseDouble(avaliacao2.getText().toString());
-                nota3 = Double.parseDouble(discussiva.getText().toString());
-                nota4 = Double.parseDouble(avaliacaoFinal.getText().toString());
-
-                media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
 
                 DecimalFormat formatar = new DecimalFormat("0.00");
                 DecimalFormatSymbols symbols = new DecimalFormatSymbols();
                 symbols.setGroupingSeparator('.');
 
+                if ((avaliacao1.getText().toString().isEmpty()) || (avaliacao2.getText().toString().isEmpty()) ||
+                        (discussiva.getText().toString().isEmpty()) || (avaliacaoFinal.getText().toString().isEmpty())) {
+                    Toast.makeText(MainActivity.this, "Todos os campos devem ser preenchidos", Toast.LENGTH_LONG).show();
+                } else {
+                    double nota1 = Float.parseFloat(avaliacao1.getText().toString());
+                    double nota2 = Float.parseFloat(avaliacao2.getText().toString());
+                    double nota3 = Float.parseFloat(discussiva.getText().toString());
+                    double nota4 = Float.parseFloat(avaliacaoFinal.getText().toString());
+                    media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
+                }
                 if (media <= 6.50) {
                     textMedia.setText("Média: " + formatar.format(media));
                     textmediaFinal.setText("Média: " + formatar.format(media));
@@ -133,12 +132,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    boolean isDouble(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
+    public void enviar(View view) {
+        if (avaliacao1.getText().toString().isEmpty()) {
+            Toast.makeText(this, "ok", Toast.LENGTH_LONG).show();
         }
     }
 }
