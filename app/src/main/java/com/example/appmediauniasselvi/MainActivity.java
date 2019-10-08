@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button limpar;
     private Button calcular;
 
-    private double media, result;
+    private double media;
 
 
     @Override
@@ -49,14 +49,7 @@ public class MainActivity extends AppCompatActivity {
         limpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                avaliacao1.setText("");
-                avaliacao2.setText("");
-                discussiva.setText("");
-                avaliacaoFinal.setText("");
-
-                textMedia.setText("");
-                textmediaFinal.setText("");
-                textresulatado.setText("");
+               limparCampos();
             }
         });
 
@@ -65,70 +58,84 @@ public class MainActivity extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                DecimalFormat formatar = new DecimalFormat("0.00");
-                DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-                symbols.setGroupingSeparator('.');
-
-                if ((avaliacao1.getText().toString().isEmpty()) || (avaliacao2.getText().toString().isEmpty()) ||
-                        (discussiva.getText().toString().isEmpty()) || (avaliacaoFinal.getText().toString().isEmpty())) {
-                    Toast.makeText(MainActivity.this, "Todos os campos devem ser preenchidos", Toast.LENGTH_LONG).show();
-                } else {
-                    double nota1 = Float.parseFloat(avaliacao1.getText().toString());
-                    double nota2 = Float.parseFloat(avaliacao2.getText().toString());
-                    double nota3 = Float.parseFloat(discussiva.getText().toString());
-                    double nota4 = Float.parseFloat(avaliacaoFinal.getText().toString());
-                    media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
-                }
-                if (media <= 6.50) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média: " + formatar.format(media));
-                    textresulatado.setText("Reprovado !");
-                    textresulatado.setTextColor(Color.RED);
-                }
-                if ((media >= 6.51) && (media <= 7.50)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 7.00");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if ((media >= 7.51) && (media < 8.00)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 7.50");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if ((media >= 8.00) && (media <= 8.50)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 8.00");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if ((media >= 8.51) && (media < 9.00)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 8.50");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if ((media >= 9.00) && (media <= 9.50)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 9.00");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if ((media >= 9.51) && (media < 10.00)) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 9.50");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
-                if (media == 10.00) {
-                    textMedia.setText("Média: " + formatar.format(media));
-                    textmediaFinal.setText("Média Final: 10.00");
-                    textresulatado.setText("Aprovado !");
-                    textresulatado.setTextColor(Color.BLUE);
-                }
+                calcularMedia();
             }
         });
+    }
+    public void calcularMedia() {
+
+        DecimalFormat formatar = new DecimalFormat("0.00");
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+        symbols.setGroupingSeparator('.');
+
+        if ((avaliacao1.getText().toString().isEmpty()) || (avaliacao2.getText().toString().isEmpty()) ||
+                (discussiva.getText().toString().isEmpty()) || (avaliacaoFinal.getText().toString().isEmpty())) {
+            Toast.makeText(MainActivity.this, "Todos os campos devem ser preenchidos", Toast.LENGTH_LONG).show();
+        } else {
+            double nota1 = Float.parseFloat(avaliacao1.getText().toString());
+            double nota2 = Float.parseFloat(avaliacao2.getText().toString());
+            double nota3 = Float.parseFloat(discussiva.getText().toString());
+            double nota4 = Float.parseFloat(avaliacaoFinal.getText().toString());
+            media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
+        }
+        if (media <= 6.50) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média: " + formatar.format(media));
+            textresulatado.setText("Reprovado !");
+            textresulatado.setTextColor(Color.RED);
+        }
+        if ((media >= 6.51) && (media <= 7.50)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 7.00");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media >= 7.51) && (media < 8.00)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 7.50");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media >= 8.00) && (media <= 8.50)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 8.00");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media >= 8.51) && (media < 9.00)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 8.50");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media >= 9.00) && (media <= 9.50)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 9.00");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media >= 9.51) && (media < 10.00)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 9.50");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if (media == 10.00) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 10.00");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+    }
+
+    public void limparCampos() {
+        avaliacao1.setText("");
+        avaliacao2.setText("");
+        discussiva.setText("");
+        avaliacaoFinal.setText("");
+
+        textMedia.setText("");
+        textmediaFinal.setText("");
+        textresulatado.setText("");
     }
 }
