@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             double nota2 = Float.parseFloat(avaliacao2.getText().toString());
             double nota3 = Float.parseFloat(discussiva.getText().toString());
             double nota4 = Float.parseFloat(avaliacaoFinal.getText().toString());
+
             media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
         }
         if (media <= 6.50) {
