@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -67,18 +68,25 @@ public class MainActivity extends AppCompatActivity {
                 double nota2 = 0;
                 double nota3 = 0;
                 double nota4 = 0;
-                if (avaliacao1.getText().toString() != "")
-                    nota1 = Double.parseDouble(avaliacao1.getText().toString());
-                if (avaliacao2.getText().toString() != "")
-                    nota2 = Double.parseDouble(avaliacao2.getText().toString());
-                if (discussiva.getText().toString() != "")
-                    nota3 = Double.parseDouble(discussiva.getText().toString());
-                if (avaliacaoFinal.getText().toString() != "")
-                    nota4 = Double.parseDouble(avaliacaoFinal.getText().toString());
 
-                double media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
-                result = media;
-                displayMensagem(NumberFormat.getCurrencyInstance().format(result));
+                if (avaliacao1.getText().toString()=="") {
+                    Toast.makeText(getApplicationContext(), "teste", Toast.LENGTH_LONG).show();
+                }else{
+                    nota1 = Double.parseDouble(avaliacao1.getText().toString());
+                    avaliacao1.setTextColor(Color.BLACK);
+                }
+
+                nota2 = Double.parseDouble(avaliacao2.getText().toString());
+                avaliacao2.setTextColor(Color.BLACK);
+
+                nota3 = Double.parseDouble(discussiva.getText().toString());
+                discussiva.setTextColor(Color.BLACK);
+
+                nota4 = Double.parseDouble(avaliacaoFinal.getText().toString());
+                avaliacaoFinal.setTextColor(Color.BLACK);
+
+                media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
+                System.out.println(media);
                 DecimalFormat formatar = new DecimalFormat("0.00");
 
                 if (media <= 6.50) {
