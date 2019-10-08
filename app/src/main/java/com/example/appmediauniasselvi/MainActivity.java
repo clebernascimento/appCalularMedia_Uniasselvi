@@ -131,10 +131,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void enviar(View view) {
-        if (avaliacao1.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ok", Toast.LENGTH_LONG).show();
-        }
-    }
 }
