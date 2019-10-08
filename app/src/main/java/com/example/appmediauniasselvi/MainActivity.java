@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -69,25 +70,16 @@ public class MainActivity extends AppCompatActivity {
                 double nota3 = 0;
                 double nota4 = 0;
 
-                if (avaliacao1.getText().toString()=="") {
-                    Toast.makeText(getApplicationContext(), "teste", Toast.LENGTH_LONG).show();
-                }else{
-                    nota1 = Double.parseDouble(avaliacao1.getText().toString());
-                    avaliacao1.setTextColor(Color.BLACK);
-                }
-
+                nota1 = Double.parseDouble(avaliacao1.getText().toString());
                 nota2 = Double.parseDouble(avaliacao2.getText().toString());
-                avaliacao2.setTextColor(Color.BLACK);
-
                 nota3 = Double.parseDouble(discussiva.getText().toString());
-                discussiva.setTextColor(Color.BLACK);
-
                 nota4 = Double.parseDouble(avaliacaoFinal.getText().toString());
-                avaliacaoFinal.setTextColor(Color.BLACK);
 
                 media = ((nota1 * 1.5) + (nota2 * 1.5) + (nota3 * 4) + (nota4 * 3)) / 10;
-                System.out.println(media);
+
                 DecimalFormat formatar = new DecimalFormat("0.00");
+                DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+                symbols.setGroupingSeparator('.');
 
                 if (media <= 6.50) {
                     textMedia.setText("Média: " + formatar.format(media));
@@ -141,7 +133,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void displayMensagem(String mesg) {
-        textresulatado.setText(mesg);
+    boolean isDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
