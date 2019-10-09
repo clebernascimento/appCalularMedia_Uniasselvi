@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -84,52 +85,62 @@ public class MainActivity extends AppCompatActivity {
             textmediaFinal.setText("Média: " + formatar.format(media));
             textresulatado.setText("Reprovado !");
             textresulatado.setTextColor(Color.RED);
+            avaliacao1.requestFocus();
         }
         if ((media >= 6.51) && (media <= 7.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 7.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if ((media >= 7.51) && (media < 8.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 7.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if ((media >= 8.00) && (media <= 8.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 8.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if ((media >= 8.51) && (media < 9.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 8.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if ((media >= 9.00) && (media <= 9.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 9.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if ((media >= 9.51) && (media < 10.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 9.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
         if (media == 10.00) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 10.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
+            avaliacao1.requestFocus();
         }
     }
 
     public void limparCampos() {
+        avaliacao1.requestFocus();
+
         avaliacao1.setText("");
         avaliacao2.setText("");
         discussiva.setText("");
