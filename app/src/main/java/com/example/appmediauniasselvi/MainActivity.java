@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements
                 manager = getSupportFragmentManager();
                 fragmentTransaction = manager.beginTransaction();
                 mediaFragment = new MediaFragment();
-                fragmentTransaction.add(R.id.media, mediaFragment);
+                fragmentTransaction.add(R.id.fragment, mediaFragment);
                 fragmentTransaction.commit();
             }
         });
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements
                 manager = getSupportFragmentManager();
                 fragmentTransaction = manager.beginTransaction();
                 paperFragment = new PaperFragment();
-                fragmentTransaction.add(R.id.media, paperFragment);
+                fragmentTransaction.add(R.id.fragment, paperFragment);
                 fragmentTransaction.commit();
             }
         });
