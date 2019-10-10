@@ -38,7 +38,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearMedia" />
 
             <LinearLayout
-                android:id="@+id/linearAvaliação1"
+                android:id="@+id/linearAvaliaçãoPaper"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -53,23 +53,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="74dp"
                     android:gravity="center"
-                    android:text="Avaliação I.: "
+                    android:text="Paper: "
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/avaliacao1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/avaliacaoPaper"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:hint="Digite sua nota"
                     android:textColor="#000000"
                     android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearAvaliação2"
+                android:id="@+id/linearAvaliaçãoMedia"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -86,14 +87,15 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="15dp"
                     android:gravity="center"
-                    android:text="Avaliação II: "
+                    android:text="Socialização: "
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/avaliacao2"
+                    android:id="@+id/avaliacaoMedia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:hint="Digite sua nota"
                     android:textColor="#000000"
                     android:inputType="numberDecimal" />

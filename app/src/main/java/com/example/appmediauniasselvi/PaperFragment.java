@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 
 public class PaperFragment extends Fragment {
 
+
+
     private OnFragmentInteractionListener mListener;
 
     public PaperFragment() {
