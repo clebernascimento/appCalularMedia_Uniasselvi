@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        manager = getSupportFragmentManager();
+//                fragmentTransaction = manager.beginTransaction();
+//                mediaFragment = new MediaFragment();
+//                fragmentTransaction.add(R.id.media, paperFragment);
+//                fragmentTransaction.commit();
 
         media = findViewById(R.id.btnMedia);
         media.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements
                 fragmentTransaction.commit();
             }
         });
-
+//
         paper = findViewById(R.id.btnPaper);
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements
                 manager = getSupportFragmentManager();
                 fragmentTransaction = manager.beginTransaction();
                 paperFragment = new PaperFragment();
-                fragmentTransaction.add(R.id.paper, paperFragment);
+                fragmentTransaction.add(R.id.media, paperFragment);
                 fragmentTransaction.commit();
             }
         });

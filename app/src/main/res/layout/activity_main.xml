@@ -78,29 +78,10 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearMedia" />
             </LinearLayout>
 
-            <LinearLayout
+            <FrameLayout
+                android:id="@+id/media"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <fragment
-                    android:id="@+id/media"
-                    android:name="com.example.appmediauniasselvi.MediaFragment"
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </fragment>
-
-                <fragment
-                    android:id="@+id/paper"
-                    android:name="com.example.appmediauniasselvi.PaperFragment"
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </fragment>
-            </LinearLayout>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
