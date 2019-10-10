@@ -44,6 +44,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
@@ -51,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="3dp"
                     android:text="Simular Média"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
@@ -66,8 +67,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:text="Simular Média"
+                    android:layout_marginTop="3dp"
+                    android:text="Simular paper"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
                     android:textColor="#000000"
@@ -77,12 +78,29 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearMedia" />
             </LinearLayout>
 
-            <fragment
-                android:id="@+id/media"
-                android:name="com.example.appmediauniasselvi.MediaFragment"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </fragment>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <fragment
+                    android:id="@+id/media"
+                    android:name="com.example.appmediauniasselvi.MediaFragment"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </fragment>
+
+                <fragment
+                    android:id="@+id/paper"
+                    android:name="com.example.appmediauniasselvi.PaperFragment"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </fragment>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -20,9 +20,12 @@ public class MainActivity extends AppCompatActivity implements
         MediaFragment.OnFragmentInteractionListener,
         PaperFragment.OnFragmentInteractionListener {
 
+    private Button media;
+    private Button paper;
     private FragmentManager manager;
     private FragmentTransaction fragmentTransaction;
     private MediaFragment mediaFragment;
+    private PaperFragment paperFragment;
 
 
     @Override
@@ -30,12 +33,30 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        manager = getSupportFragmentManager();
-        fragmentTransaction = manager.beginTransaction();
 
-        mediaFragment = new MediaFragment();
-        fragmentTransaction.add(R.id.media, mediaFragment);
-        fragmentTransaction.commit();
+        media = findViewById(R.id.btnMedia);
+        media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                manager = getSupportFragmentManager();
+                fragmentTransaction = manager.beginTransaction();
+                mediaFragment = new MediaFragment();
+                fragmentTransaction.add(R.id.media, mediaFragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        paper = findViewById(R.id.btnPaper);
+        paper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                manager = getSupportFragmentManager();
+                fragmentTransaction = manager.beginTransaction();
+                paperFragment = new PaperFragment();
+                fragmentTransaction.add(R.id.paper, paperFragment);
+                fragmentTransaction.commit();
+            }
+        });
 
     }
 

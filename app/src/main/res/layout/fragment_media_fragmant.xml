@@ -23,24 +23,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/linearMedia"
-                android:layout_width="411dp"
-                android:layout_height="140dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="129dp"
-                    android:background="@drawable/uniasselvi"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -80,11 +62,12 @@
 
                 <EditText
                     android:id="@+id/avaliacao1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite sua nota"
-                    android:textColor="#000000"
-                    android:inputType="numberDecimal" />
+                    android:layout_marginLeft="10dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
             </LinearLayout>
 
             <LinearLayout
@@ -111,11 +94,12 @@
 
                 <EditText
                     android:id="@+id/avaliacao2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite sua nota"
-                    android:textColor="#000000"
-                    android:inputType="numberDecimal" />
+                    android:layout_marginLeft="10dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
             </LinearLayout>
 
             <LinearLayout
@@ -142,11 +126,12 @@
 
                 <EditText
                     android:id="@+id/discussiva"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite sua nota"
-                    android:textColor="#000000"
-                    android:inputType="numberDecimal" />
+                    android:layout_marginLeft="10dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
             </LinearLayout>
 
             <LinearLayout
@@ -173,11 +158,12 @@
 
                 <EditText
                     android:id="@+id/avaliacaoFinal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite sua nota"
-                    android:textColor="#000000"
-                    android:inputType="numberDecimal" />
+                    android:layout_marginLeft="10dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
             </LinearLayout>
 
             <LinearLayout
