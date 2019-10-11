@@ -131,4 +131,10 @@ public class PaperActivity extends AppCompatActivity {
         textmediaFinal.setText("");
         textresulatado.setText("");
     }
+
+    @Override
+    public  void finish(){
+        super.finish();
+        overridePendingTransition(R.anim.mover_esquerda,R.anim.fade_out);
+    }
 }

@@ -1,11 +1,14 @@
 package com.example.appmediauniasselvi;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MediaActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
+                ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(getApplicationContext(),R.anim.fade_in, R.anim.mover_direita);
+                ActivityCompat.startActivity(MainActivity.this, intent, activityOptionsCompat.toBundle());
             }
         });
 
@@ -31,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PaperActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
+                ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(getApplicationContext(),R.anim.fade_in, R.anim.mover_direita);
+                ActivityCompat.startActivity(MainActivity.this, intent, activityOptionsCompat.toBundle());
             }
         });
     }
