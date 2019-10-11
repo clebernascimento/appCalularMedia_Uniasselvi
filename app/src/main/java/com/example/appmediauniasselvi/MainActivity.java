@@ -1,25 +1,16 @@
 package com.example.appmediauniasselvi;
 
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-public class MainActivity extends AppCompatActivity implements
-        MediaFragment.OnFragmentInteractionListener,
-        PaperFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity {
 
     private Button media;
     private Button paper;
-    private FragmentManager manager;
-    private FragmentTransaction fragmentTransaction;
-    private MediaFragment mediaFragment;
-    private PaperFragment paperFragment;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +21,13 @@ public class MainActivity extends AppCompatActivity implements
         media.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                manager = getSupportFragmentManager();
-                fragmentTransaction = manager.beginTransaction();
-                mediaFragment = new MediaFragment();
-                fragmentTransaction.add(R.id.fragment, mediaFragment);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(MainActivity.this, MediaActivity.class);
+                startActivity(intent);
+//                manager = getSupportFragmentManager();
+//                fragmentTransaction = manager.beginTransaction();
+//                mediaFragment = new MediaFragment();
+//                fragmentTransaction.add(R.id.fragment, mediaFragment);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -42,17 +35,19 @@ public class MainActivity extends AppCompatActivity implements
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                manager = getSupportFragmentManager();
-                fragmentTransaction = manager.beginTransaction();
-                paperFragment = new PaperFragment();
-                fragmentTransaction.add(R.id.fragment, paperFragment);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(MainActivity.this, PaperActivity.class);
+                startActivity(intent);
+//                manager = getSupportFragmentManager();
+//                fragmentTransaction = manager.beginTransaction();
+//                paperFragment = new PaperFragment();
+//                fragmentTransaction.add(R.id.fragment, paperFragment);
+//                fragmentTransaction.commit();
             }
         });
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
+//    @Override
+//    public void onFragmentInteraction(Uri uri) {
+//
+//    }
 }
