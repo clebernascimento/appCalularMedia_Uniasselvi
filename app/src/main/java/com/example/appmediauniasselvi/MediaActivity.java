@@ -127,6 +127,7 @@ public class MediaActivity extends AppCompatActivity {
     }
 
     public void limparCampos(){
+        avaliacao1.requestFocus();
         avaliacao1.setText("");
         avaliacao2.setText("");
         discussiva.setText("");
