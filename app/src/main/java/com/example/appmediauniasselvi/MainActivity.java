@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MediaActivity.class);
                 startActivity(intent);
-//                manager = getSupportFragmentManager();
-//                fragmentTransaction = manager.beginTransaction();
-//                mediaFragment = new MediaFragment();
-//                fragmentTransaction.add(R.id.fragment, mediaFragment);
-//                fragmentTransaction.commit();
             }
         });
 
@@ -37,17 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PaperActivity.class);
                 startActivity(intent);
-//                manager = getSupportFragmentManager();
-//                fragmentTransaction = manager.beginTransaction();
-//                paperFragment = new PaperFragment();
-//                fragmentTransaction.add(R.id.fragment, paperFragment);
-//                fragmentTransaction.commit();
             }
         });
     }
-
-//    @Override
-//    public void onFragmentInteraction(Uri uri) {
-//
-//    }
 }
