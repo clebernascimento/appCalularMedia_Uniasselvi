@@ -10,7 +10,7 @@
         android:label="Calcular Média Uniasselvi"
         android:roundIcon="@mipmap/calculo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
         <activity android:name=".MainActivity">
 
