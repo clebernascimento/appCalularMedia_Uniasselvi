@@ -1,7 +1,5 @@
 package com.example.appmediauniasselvi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -27,6 +27,7 @@ public class MediaActivity extends AppCompatActivity {
     private Button calcular;
 
     private double media;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,9 +83,15 @@ public class MediaActivity extends AppCompatActivity {
             textresulatado.setText("Reprovado !");
             textresulatado.setTextColor(Color.RED);
         }
-        if ((media >= 6.51) && (media <= 7.50)) {
+        if ((media >= 6.51) && (media <= 7.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 7.00");
+            textresulatado.setText("Aprovado !");
+            textresulatado.setTextColor(Color.BLUE);
+        }
+        if ((media > 7.00) && (media <= 7.50)) {
+            textMedia.setText("Média: " + formatar.format(media));
+            textmediaFinal.setText("Média Final: 7.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
@@ -114,7 +121,7 @@ public class MediaActivity extends AppCompatActivity {
         }
         if ((media >= 9.51) && (media <= 10.00)) {
             textMedia.setText("Média: " + formatar.format(media));
-            textmediaFinal.setText("Média Final: 10.0");
+            textmediaFinal.setText("Média Final: 10.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }

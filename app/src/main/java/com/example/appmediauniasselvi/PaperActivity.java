@@ -77,43 +77,43 @@ public class PaperActivity extends AppCompatActivity {
             textresulatado.setText("Reprovado !");
             textresulatado.setTextColor(Color.RED);
         }
-        if ((media >= 6.51) && (media <= 7.50)) {
+        if ((media >= 6.51) && (media <= 7.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 7.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if ((media >= 7.51) && (media < 8.00)) {
+        if ((media > 7.00) && (media <= 7.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 7.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if ((media >= 8.00) && (media <= 8.50)) {
+        if ((media >= 7.51) && (media <= 8.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 8.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if ((media >= 8.51) && (media < 9.00)) {
+        if ((media > 8.00) && (media <= 8.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 8.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if ((media >= 9.00) && (media <= 9.50)) {
+        if ((media >= 8.51) && (media <= 9.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 9.00");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if ((media >= 9.51) && (media < 10.00)) {
+        if ((media > 9.00) && (media <= 9.50)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 9.50");
             textresulatado.setText("Aprovado !");
             textresulatado.setTextColor(Color.BLUE);
         }
-        if (media == 10.00) {
+        if ((media >= 9.51) && (media <= 10.00)) {
             textMedia.setText("Média: " + formatar.format(media));
             textmediaFinal.setText("Média Final: 10.00");
             textresulatado.setText("Aprovado !");

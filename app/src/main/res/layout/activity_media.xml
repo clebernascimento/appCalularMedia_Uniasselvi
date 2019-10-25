@@ -252,8 +252,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Result"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
                 android:orientation="vertical"
                 android:gravity="center">
 
