@@ -140,7 +140,7 @@ public class MediaActivity extends AppCompatActivity {
     }
 
     @Override
-    public  void finish(){
+    public void finish(){
         super.finish();
         overridePendingTransition(R.anim.mover_esquerda,R.anim.fade_out);
     }
